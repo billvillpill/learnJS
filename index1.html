@@ -1,74 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Знакомство с HTML тегами. формы</title>
-    <script>
-
-    </script>
+    <title>Знакомство HTML тегами. формы</title>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-    <h1>Знакомство с HTML тегами. формы</h1>
-        <!-- тег form отвечает за формы, атребут action указывает адресс куда пойдут данные -->
-        <!-- атребут metod отвечает за метод передачи данных, имеет два занчения -->
-        <!-- get данные видны любому пользователю -->
-        <!-- post скрывает данные, испльзуя запрос браузера  -->
-        <form action="#" metod="get"></form>
-        <!-- тег input принимает данные для ввода, атребут type задает тип данных -->
-        <!-- placeholder добавляет подпить в форму, но на сервер не отправляет -->
-        <!-- disabled делает поля тусклым не дает ввести данные, на сервер ничего
-        отправиться -->
+    <form action="#" metod="get">
         <div>
-            <input placeholder="Подпись ввода" disabled type="text" name="username" value=""/>
-        </div>
-        <br>
-        <div>
-            <input type="password" name="userpass" value=""/>
-        </div>
-        <!-- если нужно вводить цифры, то в атребут type нужно поставить значение tel  -->
-        <!-- Дальше тег радио кнопки -->
-        <!--tabindex определяет порядок перехода между элементами при нажатии на ТАБ.
-            tabindex для radio должен быть одинаковый -->
-        <div>
-            <p><input tabindex="2" type="radio" checked name="beer" value="lager"/>Светлое пиво</p>
-            <p><input tabindex="2" type="radio" name="beer" value="dark"/>Темное пиво</p>
-        <br>
-        <div>
-            <p><input type="radio" name="beer2" value="lager"/>Светлое пиво</p>
-            <p><input type="radio" checked name="beer2" value="dark"/>Темное пиво</p>
-            <!-- checked сразу ставит выбор-->
+            <p>Имя</p>
+            <input placeholder="Имя" tabindex="1" name="username" type="text"/>
         </div>
         <div>
-            <!-- checkbox тип флажки -->
-            <p><input type="checkbox" name="car" value="yes"/>Наличие авто</p>
-            <p><input checked type="checkbox" name="car2" value="yes"/>Наличие авто 2</p>
-            <p><input type="checkbox" name="car3" value="yes"/>Наличие авто 3</p>
-            <p><input checked type="checkbox" name="car4" value="yes"/>Наличие авто 4</p>
+            <p>Пароль</p>
+            <input tabindex="2" name="userpass" type="password"/>
+        </div>
+            <p>Телефон</p>
+            <input tabindex="3" name="phone" type="tel"/>
+        <div>
+            <p>Пол</p>
+            <input checked tabindex="4" name="gender" type="radio" value="male"/> Мужской
+            <br> 
+            <input tabindex="4" name="gender" type="radio" value="female"/> Женский
         </div>
         <div>
-            <p><input type="file" name="foto"/></p>
+            <p>Имущество</p>
+            <input type="checkbox" name="bike" value="yes"/> Велик
         </div>
-        <br>
-        <!-- тег textarea форма для большого текста, атребуту cols rows это размеры
-        но это можно регулировать в css -->
         <div>
-            <textarea name="text"></textarea>
+            <input type="checkbox" name="car" value="yes"/> Машина
         </div>
-        <br>
-        <!-- форма выбора, может быть атребут multiple, тогда будут отображены
-        все варианты чтобы поставить один из вариантов исп атребут selected  -->
         <div>
-            <select multiple name="color">
-                <option value="red">Крысный</option>
-                <option selected value="yellow">Желтый</option>
-                <option value="blue">Голубой</option>
-            </select>
+            <input type="checkbox" name="house" value="yes"/> Дом
         </div>
-        <br>
-        <!-- ТЕГ КНОПКА отпрвить, в атребуте type в занвяении submit означает
-        что отправит всю форму на сервер. значение reset очищает все поля в форме-->
-        <div>
-            <button type="submit">Отправить</button>
-        </div>
+    </form>
             
 </body>
 
