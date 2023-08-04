@@ -16,10 +16,22 @@ console.log("массив myArray не изменился:", myArray)
 console.log('метод MAP')
 const myArray2 = [1, 2, 3, 20]
 console.log("массив myArray2:", myArray2)
-const newArray2 = myArray2.map(el => el * 3)
+// если в 
+const newArray2 = myArray2.map((el) => el * 3)
+// если колбэк функция будет записана с помощь фигурных
+// скобок без return результат не возратится.
+// так же в этом случаи можно, записать как функциональное 
+// выражение.
+// пример:
+// const newArray2 = maArrae2.map((el) => {
+//     return el * 3
+// })
+
 console.log("результат умнажения методом map, массив newArray:",
 newArray2)
 console.log("массив myArray2:", myArray2)
+// newArray2 это новый массив, при этом оригальный массив
+// неизменился.
 console.log("массив newArray2:", newArray2)
-// создался новый массив newArray2.
+
 
