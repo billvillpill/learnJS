@@ -1,3 +1,4 @@
-import sumNambers from './moduleOne.mjs'
-const res1 = sumNambers(10, 2)
-console.log(res1)
+import { sum, mult as multNumbers } from './moduleOne.mjs'
+
+console.log(sum(10, 2))
+console.log(multNumbers(10, 2))

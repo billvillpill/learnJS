@@ -1,2 +1,3 @@
 const sum = (a, b) => a + b
-export default sum
+const mult = (a, b) => a * b
+export { sum, mult }
