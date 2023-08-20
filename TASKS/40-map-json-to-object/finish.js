@@ -15,3 +15,18 @@ const postsJSON = [
   '{"postId":6134,"commentsQuantity":2}',
   '{"postId":2351,"commentsQuantity":8}',
 ]
+// первый вариант
+//  const postsJS = postsJSON.map((post) => JSON.parse(post)) 
+// второй вариант
+// const postsJS = postsJSON.map(JSON.parse) перебирает массив postsJSON и возращает уже новый массив.
+// поэтому этим способом лучше, чем forEach.
+
+const postsNewArray = [...postsJSON]
+let newObject = [ ]
+postsNewArray.forEach((value) => {
+  let key = JSON.parse(value)
+  newObject.push(key)
+});
+console.log('результирующий массив: ', newObject)
+console.log('postId второго объекта: ', newObject[1].postId)
+console.log('commentsQuantity последенего объекта: ', newObject[3].commentsQuantity)

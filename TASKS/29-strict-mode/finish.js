@@ -8,8 +8,9 @@
 'use strict'
 
 function myFunction() {
-  a = 2
+  const a = 2
   return a
 }
 
 myFunction()
+// нужно объявить переменную 'a' в теле функции.

@@ -3,12 +3,14 @@
  * Измените код так, чтобы ошибка исчезла
  */
 
-const myFavoriteAnimal = 'Monkey'
+const myFavoriteAnimal1 = 'Monkey'
 
-console.log(myFavoriteAnimal)
+console.log(myFavoriteAnimal1)
 // 'Monkey'
 
-const myFavoriteAnimal = 'Cat'
+const myFavoriteAnimal2 = 'Cat'
 
-console.log(myFavoriteAnimal)
+console.log(myFavoriteAnimal2)
 // 'Cat'
+// можно или менять название переменной или объявлять переменную через let
+// после не объявлять, а просто переприсвоить

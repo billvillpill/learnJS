@@ -6,3 +6,8 @@
  *
  * 3. Выведите в консоль длину результирующего массива
  */
+const myArray = [true, 234, false, 'hello', 99]
+
+myArray.push('bay', 11)
+console.log(myArray)
+console.log(myArray.length)

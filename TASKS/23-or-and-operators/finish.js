@@ -4,3 +4,4 @@
  */
 
 console.log(3 || (true && null) || false)
+// в консоль будет выведено 3

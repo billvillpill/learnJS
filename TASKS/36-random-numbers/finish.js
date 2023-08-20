@@ -18,3 +18,21 @@ const MIN = 1000
 const MAX = 9999
 
 const myNumbers = [2355, 7235, 8135, 1762, 2361, 8351]
+
+function getRandomintInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
+  } 
+  const addRandomNumber = (arr, min, max) => {
+    updatedArr = [...arr]
+    let newNumber
+    do {
+        newNumber = getRandomintInclusive(min, max)
+    } while (updatedArr.includes(newNumber));
+    updatedArr.push(newNumber)
+    return updatedArr
+  }
+  const newArry = addRandomNumber(myNumbers, MIN, MAX)
+  console.log('новый массив', newArry)
+  console.log('оригинальный массив', myNumbers)

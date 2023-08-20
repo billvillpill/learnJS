@@ -13,3 +13,21 @@ const myObject = {
   key4: null,
   key10: NaN,
 }
+
+// через метод forEach
+Object.values(myObject).forEach(value => {
+  if (value === myObject.key1 || (value === myObject.key3)) {
+    console.log(value)
+  }
+});
+
+// через метод for
+for (const key in myObject) {
+  if(myObject[key] === true) {
+    console.log(myObject[key])
+  }
+  if (myObject[key] === 'abc') {
+    console.log(myObject[key])
+  } 
+}
+

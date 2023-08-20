@@ -12,3 +12,9 @@
  * "Сообщение номер 4"
  * "Сообщение номер 5"
  */
+let i = 1
+const setIn = setInterval(function myFn() {
+    console.log('Сообщение номер', i)
+    i += 1
+}, 2000)
+setTimeout(() => clearInterval(setIn), 11000)

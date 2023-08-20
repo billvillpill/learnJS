@@ -8,10 +8,27 @@
 
 let myVariable1 = 10
 let myVariable2 = '5'
+Number(myVariable2)
 
 // Напишите код здесь
+if (myVariable1 <= myVariable2) {
+    console.log(true);
+} else {
+    console.log(false);
+}
 
 myVariable1 = '20'
 myVariable2 = 100
+Number(myVariable1)
+
+// parseInt(myVariable1) так же можно было, конвентирует строку в число.
 
 // Напишите код здесь
+if (myVariable1 <= myVariable2) {
+    console.log(true);
+} else {
+    console.log(false);
+}
+// короче:
+console.log(myVariable1 <= myVariable2)
+
