@@ -9,6 +9,17 @@
  * 3. Оригинальный массив должен остаться без изменений
  */
 
+const sortProductsByPrice = (products) => {
+  // копируем массив в переменную sortedProducts при вызове функции.
+  // a и b это элементы массива - первый и второй, через точечную запись получаю доступ к значению 
+  // price cвойств объектов, в массива inputProducts.
+  // сортировка происходит следующим способом:
+  // Если разница отрицательная: значит значения элемента 'a' меньше значения элемента 'b'
+  // Если разница положительная (больше нуля), тогда значение элемента 'a' больше значения элемента 'b'
+  // Если разница равна 0, тогда они одинаковы. 
+  return [...products].sort((a, b) => a.price - b.price)
+}
+
 const inputProducts = [
   {
     title: 'Phone case',
@@ -36,8 +47,8 @@ const inputProducts = [
   },
 ]
 
-// const sortedProducts = sortProductsByPrice(inputProducts)
+const sortedProducts = sortProductsByPrice(inputProducts)
 
-// console.log(sortedProducts) // Массив отсортированных товаров
+console.log('Массив отсортированных товаров:', sortedProducts) // Массив отсортированных товаров
 
-// console.log(inputProducts) // Оригинальный массив не должен измениться
+console.log('Оригинальный массив не должен измениться:', inputProducts) // Оригинальный массив не должен измениться

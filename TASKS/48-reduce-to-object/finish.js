@@ -7,6 +7,15 @@
  * равными сумме всех количеств в каждой категории
  */
 
+function quantitiesByCategories (products) {
+  return products.reduce((categoryObject, product) => {
+      const { category, quantity } = product
+      categoryObject[category] = (categoryObject[category] || 0) + quantity
+      return categoryObject
+    }, {})
+}
+// console.log(inputProducts[0].hasOwnProperty('category'))
+
 const inputProducts = [
   {
     title: 'Phone case',
