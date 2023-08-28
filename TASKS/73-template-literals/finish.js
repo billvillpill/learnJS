@@ -13,6 +13,10 @@ const cars = [
 ]
 
 // Создайте функцию "carInfo" здесь
+const carInfo = (car) => car.price <= 20000 
+  ? `Цена автомобиля ${car.brand} - ${car.price}$ и это дешёвая машина`
+  : `Цена автомобиля ${car.brand} - ${car.price}$ и это дорогая машина`
+
 
 cars.forEach((car) => console.log(carInfo(car)))
 // Цена автомобиля Honda - 13000$ и это дешёвая машина

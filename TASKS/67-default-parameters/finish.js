@@ -7,11 +7,20 @@
  * 2. Перепишите функцию с использованием значения по умолчанию
  * для параметра mult в "multiplyBy"
  */
-
+// 1 задание
 function multiplyBy(a, mult) {
   mult = mult !== undefined ? mult : 2
+  // mult = mult || 2 в строке 12 нельзя использовать это выражение
+  // т.к. при mult равным любому числу параметр 'a' и 'mult' будут равны true
+  // а оператор || должен вернуть только одно значение с true,
+  // поэтому он будет работать, где одно из значений равно undefined
+
   console.log(a * mult)
 }
+// 2 задание
+// function multiplyBy(a, mult = 2) {
+//   console.log(a * mult)
+// }
 
 multiplyBy(2)
 // 4

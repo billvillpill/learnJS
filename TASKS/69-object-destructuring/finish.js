@@ -13,6 +13,10 @@ const objectWithNumbers = {
 }
 
 // Создайте функцию здесь
+const mult = (multiplicationNum) => {
+  return Object.keys(multiplicationNum).reduce((sum, key) => sum *= multiplicationNum[key], 1)
+
+}
 
 const result = mult(objectWithNumbers)
 console.log(result)
