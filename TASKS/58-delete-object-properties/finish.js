@@ -16,6 +16,13 @@ let person = {
   name: 'Samanta Larsen',
   cartId: 435,
 }
+// delete person._id
+// delete person.cart
+// delete person.processed
+
+let _id, processed, cart;
+// скобки нужны, чтобы js воспринимал следующую строку, как деструктиризацию, а не блок кода  { }.
+({ _id, processed, cart, ...person } = person)
 
 console.log(person)
 /*

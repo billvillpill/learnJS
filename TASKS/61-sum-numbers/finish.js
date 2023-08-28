@@ -7,6 +7,13 @@
  *
  * 3. Также верните эту сумму как результат функции
  */
+const sumNumbers = (...numbers) => {
+    console.log('Аргументы:', ...numbers)
+    console.log('Результат вызова в функци:',
+    numbers.reduce((sumArray, num) => sumArray += num, 0))
+    // return numbers.reduce((sumArray, num) => sumArray += num, 0)
+}
+// console.log(sumNumbers(1, 3))
 
 sumNumbers(1, 3)
 // 4

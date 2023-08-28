@@ -9,6 +9,21 @@
  * 3. Исходный массив постов должен остаться без изменений
  */
 
+const processPosts = (post) => {
+  return post.map((postObject) => {
+    const {
+      postId,
+      author,
+      commentsQty = 0 } = postObject
+    return {
+      postId: postId + 1000,
+      author,
+      commentsQty,
+    }
+  })
+} 
+
+
 const testPosts = [
   {
     postId: 234,
@@ -27,7 +42,7 @@ const testPosts = [
 ]
 
 const processedPosts = processPosts(testPosts)
-console.log(processedPosts)
+console.log('Новый массив', processedPosts)
 /*
 [
   {
@@ -48,5 +63,5 @@ console.log(processedPosts)
 ]
 */
 
-console.log(testPosts)
+console.log('Оригинальный массив', testPosts)
 // оригинальный массив должен остаться без изменений
