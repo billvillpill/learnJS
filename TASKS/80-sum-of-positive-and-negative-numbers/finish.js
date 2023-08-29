@@ -13,6 +13,11 @@
 const nums = [10, -12, 30, -1, -8, 0, 14, -33, 20]
 
 // Создайте функцию "sumPositiveNegative" здесь
+const sumPositiveNegative = (nums) => {
+    let sumPos = 0, sumNeg = 0
+    nums.forEach((el) => el <= 0 ? sumNeg += el : sumPos += el);
+    return { positive: sumPos, negative: sumNeg }
+}
 
 const result = sumPositiveNegative(nums)
 
