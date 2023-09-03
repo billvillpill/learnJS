@@ -11,7 +11,7 @@ function countdown(n) {
     return [];
   } else {
     const newCount = countdown(n - 1);
-    newCount.unshift(n);
+    newCount.unshift(n);  // если push, тогда будет добавлять цифры в массив в обратном порядке
     return newCount
   }
   
