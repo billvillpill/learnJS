@@ -17,6 +17,7 @@ Let's say that you are given the integer '877692'.
 
 2 evenly divides with 877692. 877692/2 = 438846 with 0 remainder.
  */
+// не решил
 function getCount(n) {
     let number;
     let sum = 0;
