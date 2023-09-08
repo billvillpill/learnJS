@@ -6,6 +6,7 @@ Create a function that takes a string and returns the string ciphered with Rot13
 If there are numbers or special characters included in the string, they should be returned as they are.
 Only letters from the latin/english alphabet should be shifted, like in the original Rot13 "implementation".
  */
+// мое решение:
 function rot13(message){
     let newMessage = ''
     for (let i = 0; i < message.length; i++) {
@@ -35,5 +36,6 @@ function rot13(message){
     return newMessage
 }
 console.log(rot13("n6/>;njm?+[RA"))
-//nopqrstuvwxymabcdefghijklm
-//nopqrstuvwxyzabcdefghijklm
+// как можно было решить
+// const rot13 = str => str.replace(/[a-z]/gi, letter => String.fromCharCode(letter.charCodeAt(0) + (letter.toLowerCase() <= 'm' ? 13: -13)));
+// console.log(rot13("ABCZMabczm67z&$"))
