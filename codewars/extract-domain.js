@@ -10,6 +10,7 @@ parses out just the domain name and returns it as a string. For example:
 function domainName(url) {
     let newArray = [];
     let strArray = url.split('/')
+    console.log(strArray)
     strArray.forEach(el => {
         if(/\./.test(el) === true) {
             newArray.push(el)
