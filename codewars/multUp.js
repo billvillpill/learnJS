@@ -29,24 +29,31 @@ var house = {"weight": 45000};
 
 Can you lift a tiny 95 kg(~200 pound) push cart with 50 balloons like in one of the starting scenes of the movie?
  */
+const letterToEllie = {'weight': 0.004536};
+const house = {'weight': 45000};
+const pushCart = {'weight': 95};
+const lawnChair = {'weight': 5};
+
 function Journey(object, crew, balloons) {
-    constructor(object, crew, balloons) {
-        this.object = {"weight": 45000}; //в кг
-        this.crew = {
-            "kol": crew,
-            "weight": 80
-        };   //  в кг
-        this.balloons = {
-            "kol": balloons,
-            "weight": 0.0048
-        }; //  в кг
-      
-      }
-    
-      sayHi() {
-        object["weight"] + 
-        
-        alert(this.name);
-      }
-    
+  this.object = object;
+  this.crew = crew;
+  this.balloons = balloons;
 }
+
+Journey.prototype.isPossible = function() {
+  return this.balloons * 0.0048 >= this.object.weight + this.crew * 80;
+}
+const gravityFalls = new Journey(letterToEllie, 10, 1000622);
+
+// class Journey {
+//   constructor(object, crew, balloons){
+//     this.weight = object.weight
+//     this.crew = crew
+//     this.balloons = balloons
+//   }
+  
+//   isPossible(){
+//     return 0.0048 * this.balloons >= this.crew * 80 + this.weight ? true : false
+//   }
+// }
+console.log(gravityFalls.isPossible())
